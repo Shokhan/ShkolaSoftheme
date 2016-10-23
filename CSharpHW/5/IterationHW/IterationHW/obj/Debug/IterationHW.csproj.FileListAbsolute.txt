@@ -1,0 +1,6 @@
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\bin\Debug\IterationHW.exe.config
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\bin\Debug\IterationHW.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\bin\Debug\IterationHW.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\obj\Debug\IterationHW.csprojResolveAssemblyReference.cache
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\obj\Debug\IterationHW.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\5\IterationHW\IterationHW\obj\Debug\IterationHW.pdb

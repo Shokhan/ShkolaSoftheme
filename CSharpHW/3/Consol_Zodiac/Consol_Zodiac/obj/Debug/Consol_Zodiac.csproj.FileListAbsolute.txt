@@ -1,0 +1,12 @@
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.exe.config
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.csprojResolveAssemblyReference.cache
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.exe.config
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\bin\Debug\Consol_Zodiac.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\3\Consol_Zodiac\Consol_Zodiac\obj\Debug\Consol_Zodiac.csprojResolveAssemblyReference.cache

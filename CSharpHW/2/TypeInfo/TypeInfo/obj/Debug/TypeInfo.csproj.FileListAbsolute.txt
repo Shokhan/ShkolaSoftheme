@@ -1,0 +1,6 @@
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\bin\Debug\TypeInfo.exe.config
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\bin\Debug\TypeInfo.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\bin\Debug\TypeInfo.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\obj\Debug\TypeInfo.csprojResolveAssemblyReference.cache
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\obj\Debug\TypeInfo.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\2\TypeInfo\TypeInfo\obj\Debug\TypeInfo.pdb

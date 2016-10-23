@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Softheme</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .square
+        {
+             border: 1px solid #000;
+             border-radius: 4px;
+             margin: 20px;
+             background-color: right;
+             padding: 10px;
+        }
+
+        img 
+        {
+            width: 300px;
+            height: 200px;
+        }
+
+        h2
+        {
+            margin-left: 20px;
+        }
+
+        footer
+        {
+            display: block;
+            background-color: #404040;
+            border-top: 5px solid #E55300;
+            color: white;
+            min-height: 150px;
+        }
+
+        ul
+        {
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        li.rad
+        {
+            float: right;
+            padding: 4px;
+            margin: 20px;
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-center">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Меню</a></li>
+                <li><a href="#">Заказ</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="Search" class="btn btn-default">Search</button>
+            </form>
+           
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </nav>
+
+    <h1 id="Menu" style="text-align: center">Меню</h1>
+    <p style="text-align: center; font-size: 15px;">Суши, роли, нигири и сеты готовятся только из свежих продуктов. 
+        Только у нас вы найдете такое сочетание мастерства приготовления и умерености оплаты.</p>
+    
+    <p>
+        <ul>
+            <li class="rad">Все <input name="ch" type="radio"/></li>
+            <li class="rad">Популярное <input name="ch" type="radio"/></li>
+            <li class="rad">Акции <input name="ch" type="radio"/></li>
+            <li class="rad">Новинки <input name="ch" type="radio"/></li>
+        </ul>
+    </p>
+    <section>
+            <article>
+                <h2>Роллы</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Сяке маки</h3>
+                            <img src="Sushi_img\1.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Сяке маки</h3>
+                            <img src="Sushi_img\1.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Сяке маки</h3>
+                            <img src="Sushi_img\1.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                    </div>
+                </div>       
+            </article>
+            <article>
+                <h2>Супы</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                         <div class="col-xs-10 col-md-3 square">
+                            <h3>Рамен</h3>
+                            <img src="Sushi_img\3.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Рамен</h3>
+                            <img src="Sushi_img\3.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Рамен</h3>
+                            <img src="Sushi_img\3.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h2>Салаты</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Чука</h3>
+                            <img src="Sushi_img\0.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Чука</h3>
+                            <img src="Sushi_img\0.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                        <div class="col-xs-10 col-md-3 square">
+                            <h3>Чука</h3>
+                            <img src="Sushi_img\0.jpeg"/><br/>
+                            <strong>63 грн</strong> 
+                            <button type="button" class="btn btn-info" style="float: right">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+    </section>
+
+    <footer>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+        
