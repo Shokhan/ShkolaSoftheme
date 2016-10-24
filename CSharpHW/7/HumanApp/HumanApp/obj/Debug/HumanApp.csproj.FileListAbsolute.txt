@@ -1,0 +1,6 @@
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\bin\Debug\HumanApp.exe.config
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\bin\Debug\HumanApp.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\bin\Debug\HumanApp.pdb
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\obj\Debug\HumanApp.csprojResolveAssemblyReference.cache
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\obj\Debug\HumanApp.exe
+C:\Users\Shohan\Desktop\Softheme\c#\CSharpHW\6\HumanApp\HumanApp\obj\Debug\HumanApp.pdb
