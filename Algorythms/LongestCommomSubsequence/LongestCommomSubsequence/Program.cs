@@ -12,7 +12,7 @@ namespace LongestCommomSubsequence
         {
             string s1 = "ABC",
             s2 = "BCA";
-            LcsDeterminator lcsd = new LcsDeterminator(s1, s2);
+            LCS(s1, s2);
             Console.WriteLine(LCS(s1, s2));
         }
 
