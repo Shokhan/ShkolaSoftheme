@@ -17,22 +17,21 @@ namespace DecisionMaking
         [StringLength(255, ErrorMessage = "Last name should less than 255 characters")]
         public string LstName { get; set; }
 
-        [Required(ErrorMessage ="Field day should contain data")]
-        [Range(1, 31, ErrorMessage ="Invalid day.")]
-        public int Day { get; set; }
+        [Date(DateAttribute.DatePart.Day)]
+        public string Day { get; set; }
 
-        [Required(ErrorMessage = "Field month should contain data")]
-        [Range(1, 12, ErrorMessage = "Invalid month.")]
-        public int Month { get; set; }
+        [Date(DateAttribute.DatePart.Month)]
+        public string Month { get; set; }
 
-        [Required(ErrorMessage = "Field year should contain data")]
-        [Range(1900, 2017, ErrorMessage = "Invalid year.")]
-        public int Year { get; set; }
+        [Date(DateAttribute.DatePart.Year)]
+        public string Year { get; set; }
         
-        [Required(ErrorMessage = @"Field male/female should contain one of these status")]
+        [EmailAddress(ErrorMessage ="Incorrect Email")]
+        public string Email { get; set; }
+        [Gender]
         public string Sex { get; set; }
 
-        [Required(ErrorMessage ="Field phone number should contain data")]
+        //[Required(ErrorMessage ="Field phone number should contain data")]
         [Phone(ErrorMessage ="Incorrect phone number")]
         public string PhoneNumber { get; set; }
 

@@ -30,42 +30,23 @@ namespace DecisionMaking
         {
             string wrongInput = string.Empty;
 
-            if (containChar(day.Text) || containChar(month.Text) || containChar(year.Text))
-                wrongInput += "Date can be only a number.\n";
-            else
+            User user = new User();
+            user.FirstName = name.Text;
+            user.LstName = lastName.Text;
+            user.Day = day.Text;
+            user.Month = month.Text;
+            user.Year = year.Text;
+            user.PhoneNumber = phoneNum.Text;
+            user.Sex = gender.Text;
+            user.additionalInfo = addInfo.Text;
+            user.Email = email.Text;
+            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+            var context = new ValidationContext(user);
+            var errors = Validator.Validate(user); 
+
+            foreach(var err in errors)
             {
-                if (containNumbers(name.Text))
-                    wrongInput += "Name should contain only letters.\n";
-
-                if (containNumbers(lastName.Text))
-                    wrongInput += "Last name should contain only letters.\n";
-
-                if (gender.Text.ToLower() != "male" && gender.Text.ToLower() != "emale")
-                    wrongInput += "Incorrect gender input.\n";
-
-                if (!email.Text.Contains("@"))
-                    wrongInput += "Email does not contain @.\n";
-
-                if(wrongInput == string.Empty)
-                {
-                    User user = new User();
-                    user.FirstName = name.Text;
-                    user.LstName = lastName.Text;
-                    user.Day = int.Parse(day.Text);
-                    user.Month = int.Parse(month.Text);
-                    user.Year = int.Parse(year.Text);
-                    user.PhoneNumber = phoneNum.Text;
-                    user.Sex = gender.Text;
-                    user.additionalInfo = addInfo.Text;
-
-                    var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
-                    var context = new ValidationContext(user);
-                    if (!Validator.TryValidateObject(user, context, results))
-                    {
-                        foreach (var error in results)
-                            wrongInput += error.ErrorMessage + '\n';
-                    }
-                }
+                wrongInput += err + "\n";
             }
 
             return wrongInput;
@@ -76,7 +57,7 @@ namespace DecisionMaking
 
             if (wrongInput == "")
             {
-                if(MessageBox.Show("Registration successfull.") == MessageBoxResult.OK)
+                if (MessageBox.Show("Registration successfull.") == MessageBoxResult.OK)
                     Environment.Exit(0);
                 //finish prog
             }
@@ -84,22 +65,6 @@ namespace DecisionMaking
                 MessageBox.Show(wrongInput);
         }
 
-        public bool containNumbers(string str)
-        {
-            int size = str.Length;
-            for (int i = 0; i < size; ++i)
-                if (char.IsDigit(str[i]))
-                    return true;
-            return false;
-        }
-
-        public bool containChar(string str)
-        {
-            int size = str.Length;
-            for (int i = 0; i < size; ++i)
-                if (char.IsLetter(str[i]))
-                    return true;
-            return false;
-        }
+  
     }
 }

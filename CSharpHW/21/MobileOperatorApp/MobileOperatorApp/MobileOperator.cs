@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace MobileOperatorApp
 {
@@ -12,8 +14,16 @@ namespace MobileOperatorApp
 
         private static List<string> _callHistory = new List<string>();
 
+
         public static string RedirectCall(MobileAccount sender, string phoneNum, string txt = "")
         {
+            string conFail = "Connection failed.";
+            if(sender.Money == 0)
+            {
+                SendWarnMessage("You do not have money", sender.PhoneNum);
+                return conFail;
+            }
+
             string connectionInfo = string.Format("Subscriber {0}  called to {1}. ", sender.PhoneNum, phoneNum);
 
             var resultIter = (from subs in _subscribers
@@ -23,7 +33,7 @@ namespace MobileOperatorApp
             resultIter.MoveNext();
             var subscriber = resultIter.Current;
 
-            if(subscriber != null)
+            if (subscriber != null)
             {
                 subscriber.GetCall(sender);
                 string success = "Connection successful.";
@@ -31,7 +41,6 @@ namespace MobileOperatorApp
                 return success;
             }
 
-            string conFail = "Connection failed.";
             _callHistory.Add(connectionInfo + conFail);
             return conFail;
         }
@@ -87,5 +96,53 @@ namespace MobileOperatorApp
                     sub.Name, sub.PhoneNum, sub.RateOfActivity.ToString());
             }
         }
+
+
+        private static void SendOpMessage(string str, string phoneNum, MethodBase m)
+        {
+            var s = from sub in _subscribers
+                    where sub.PhoneNum == phoneNum
+                    select sub;
+
+            foreach (var subscriber in s)
+            {
+                subscriber.GetMessageFromOperator(str, m);
+            }
+        }
+
+        [OperatorMessage(OperatorMessageAttribute.MessageType.Info)]
+        public static void SendInfoMessage(string str, string phoneNum)
+        {
+            MethodBase method = MethodBase.GetCurrentMethod();
+            SendOpMessage(str, phoneNum, method);
+            
+        }
+
+        [OperatorMessage(OperatorMessageAttribute.MessageType.Warn)]
+        public static void SendWarnMessage(string str, string phoneNum)
+        {
+            MethodBase method = MethodBase.GetCurrentMethod();
+            SendOpMessage(str, phoneNum, method);
+        }
+
+        public static void SerializeData()
+        {
+            MySerializer ser = new MySerializer();
+            long speedOfXmlSerialization,
+                speedOfBinarySerialization,
+                speedOfJsonSerialization,
+                speedOfProtobufSerialization;
+
+            speedOfXmlSerialization = ser.XmlSerialization(_subscribers);
+            //List<MobileAccount> l = new List<MobileAccount>();
+            //ser.XmlDeserialization(l);
+
+            speedOfBinarySerialization = ser.BinarySerialization(_subscribers);
+            speedOfJsonSerialization = ser.JsonSerialization(_subscribers);
+            speedOfProtobufSerialization = ser.ProtoBufSerializer(_subscribers);
+
+            Console.WriteLine("\nSpeed of serizalizations in ms:\nXml: {0}.\nBinary: {1}.\nJson: {2}.\nProtobuf: {3}.",
+                speedOfXmlSerialization, speedOfBinarySerialization, speedOfJsonSerialization, speedOfProtobufSerialization);
+        }    
     }
 }
