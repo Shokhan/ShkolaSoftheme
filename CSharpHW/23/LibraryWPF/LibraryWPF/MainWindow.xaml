@@ -1,0 +1,32 @@
+﻿<Window x:Class="LibraryWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="446" Width="628" Background="Bisque">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="547*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="display" HorizontalAlignment="Left" Height="312" Margin="34,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="searchOptions" HorizontalAlignment="Left" Margin="224,67,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" SelectionChanged="searchOptions_SelectionChanged"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="224,46,0,0" TextWrapping="Wrap" Text="Выбрать:" VerticalAlignment="Top" Width="76" Grid.Column="2"/>
+        <TextBox x:Name="searchCriteria" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="370,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="2" HorizontalAlignment="Left" Margin="370,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"><Run Text="Ключевое"/><Run Text=" слово"/></TextBlock>
+        <Button x:Name="show" Content="Показать" Grid.Column="2" HorizontalAlignment="Left" Margin="225,110,0,0" VerticalAlignment="Top" Width="265" Click="show_Click"/>
+        <TextBlock x:Name="textBlock2" Grid.Column="2" HorizontalAlignment="Left" Margin="246,167,0,0" TextWrapping="Wrap" Text="Добавить:" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="textBlock3" Grid.Column="2" HorizontalAlignment="Left" Margin="224,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63"><Run Text="Название:"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="name" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="292,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <TextBlock x:Name="textBlock4" Grid.Column="2" HorizontalAlignment="Left" Margin="225,220,0,0" TextWrapping="Wrap" Text="Жанр:" VerticalAlignment="Top"/>
+        <TextBox x:Name="genre" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="292,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <TextBox x:Name="price" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="292,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <TextBlock x:Name="textBlock5" Grid.Column="2" HorizontalAlignment="Left" Margin="227,260,0,0" TextWrapping="Wrap" Text="Цена:" VerticalAlignment="Top"/>
+        <TextBox x:Name="description" Grid.Column="2" HorizontalAlignment="Left" Height="81" Margin="292,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <TextBlock x:Name="textBlock6" Grid.Column="2" HorizontalAlignment="Left" Margin="220,302,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" Width="67"/>
+        <Button x:Name="add" Content="Добавить" Grid.Column="2" HorizontalAlignment="Left" Margin="200,354,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+    </Grid>
+</Window>

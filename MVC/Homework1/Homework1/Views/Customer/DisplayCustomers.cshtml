@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Homework1.Models.Customers>
+
+@{
+    ViewBag.Title = "DisplayCustomers";
+}
+
+<h2>DisplayCustomers</h2>
+
+<style>
+    .item {
+        margin: 20px;
+        border: 1px solid #000000;
+        border-style: outset;
+        background-color: aquamarine;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var customer in Model)
+        {
+            <div class="col-lg-5 well item">
+                Contact name: @customer.ContactName<br />
+                Phone: @customer.Phone<br />
+                City: @customer.City
+                    <div class="pull-right btn btn-default">
+                        @Html.ActionLink("History", "orders", new { id =  customer.CustomerId }, null)
+                    </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
