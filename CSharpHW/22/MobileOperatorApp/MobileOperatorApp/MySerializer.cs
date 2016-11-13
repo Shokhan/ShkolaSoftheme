@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Json;
 using ProtoBuf;
 using System.Xml.Linq;
 using System.IO.Compression;
+using System.Xml;
 
 namespace MobileOperatorApp
 {
@@ -24,12 +25,7 @@ namespace MobileOperatorApp
             {
                 formatter.Serialize(stream, mobOp);
             }
-
-            //string file = Environment.CurrentDirectory + @"\XmlFile.xml",
-            //    destination = Environment.CurrentDirectory + @"\ZipXmlFile.zip";
-
-            //ZipFile.CreateFromDirectory(file,destination);
-
+       
             watch.Stop();
             return watch.ElapsedMilliseconds;
         }
@@ -57,8 +53,6 @@ namespace MobileOperatorApp
             {
                 list = (List<MobileAccount>)formatter.Deserialize(fs);
             }
-
-            ZipFile.CreateFromDirectory(Environment.CurrentDirectory, Environment.CurrentDirectory + "ZipArch");
             return list;
         }
 

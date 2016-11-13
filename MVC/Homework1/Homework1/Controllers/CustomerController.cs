@@ -1,4 +1,5 @@
-﻿using Homework1.Models;
+﻿using Homework1.Filters;
+using Homework1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 namespace Homework1.Controllers
 {
     [RoutePrefix("Customers")]
+    [Culture]
     public class CustomerController : Controller
     {
         // GET: Customer
@@ -16,28 +18,37 @@ namespace Homework1.Controllers
         {
             using (var db = new TestSQLDB2014Entities1())
             {
-                var customers = from cust in db.Customers
-                                select cust;
+                var customers = (from cust in db.Customers
+                                select cust).ToList();
                 return View(customers);
             }
         }
+
         [HttpGet]
         [Route("orders/{id:int?}")]
         public ActionResult Orders(int? id)
         {
-            
+
             using (var db = new TestSQLDB2014Entities1())
             {
-                var orders = from o in db.Orders
+                var orders = (from o in db.Orders
                              where o.CustomerId == id
-                             select new
+                             select new OrdersHistory
                              {
-                                 Name = db.Customers.Where(c => c.CustomerId == id)
-                                 .Select(c => c.ContactName).Take(1),
+                                 products = (from p in db.Products
+                                                    from od in db.OrderDetails
+                                                    where od.OrderId == o.OrderId && p.ProductId == od.ProductId
+                                                    select new ProductInfo
+                                                    {
+                                                        Name = p.ProductName,
+                                                        Number = od.Quantity,
+                                                        Price = od.UnitPrice
+                                                    }).ToList(),
 
-                                 OrderedProducts = db.OrderDetails.Where(d => d.OrderId == o.OrderId)
-                                 .Select(d => d.)
-                             }
+                                 OrderDate = o.OrderDate
+                             }).ToList();
+
+                return View(orders);
             }
 
             return View();

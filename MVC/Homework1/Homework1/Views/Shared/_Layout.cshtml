@@ -15,10 +15,22 @@
                 <a class="navbar-brand" href="#">WebSiteName</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-                <li><a href="@Url.Action("ProductsView", "Products")">Products</a></li>
-                <li><a href="@Url.Action("Info", "Customers")">Clients</a></li>
-                <li><a href="#">Orders</a></li>
+                <li><a href="@Url.Action("Index", "Home")">@Resources.Resource.Home</a></li>
+                <li><a href="@Url.Action("ProductsView", "Products")">@Resources.Resource.Products</a></li>
+                <li><a href="@Url.Action("Info", "Customers")">@Resources.Resource.Clients</a></li>
+                <li>
+                    <div>
+                        @using (Html.BeginForm("ChangeCulture", "Home"))
+                        {
+                            <select class="myinput" name="lang">
+                                <option disabled selected>@Resources.Resource.ChooseLang</option>
+                                <option value="ru">Русский</option>
+                                <option value="en">English</option>
+                            </select>
+                            <input class="btn btn-default" type="submit" name="submit" value="@Resources.Resource.ChooseLang">
+                        }
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -26,8 +38,8 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
+        <footer class="col-lg-10">
+            <hr />
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>

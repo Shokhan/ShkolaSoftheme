@@ -7,8 +7,15 @@ namespace Homework1.Models
 {
     public class OrdersHistory
     {
-        public string CustomerName { get; set; }
-        public List<Products> products { get; set; }
+        public List<ProductInfo> products { get; set; }
         public DateTime OrderDate { get; set; }
+    }
+
+    public class ProductInfo
+    {
+        public string Name { get; set; }
+        public int Number { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

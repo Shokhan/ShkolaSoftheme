@@ -1,4 +1,5 @@
-﻿using Homework1.Models;
+﻿using Homework1.Filters;
+using Homework1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 namespace Homework1.Controllers
 {
     [RoutePrefix("Products")]
+    [Culture]
     public class ProductsController : Controller
     {
         // GET: Products

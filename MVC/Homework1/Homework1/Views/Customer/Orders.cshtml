@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Homework1.Models.OrdersHistory>
+
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>@Resources.Resource.Orders</h2>
+
+
+@foreach(var order in Model)
+{
+    <div class="well col-lg-10 item">
+       <h3>Order date: @order.OrderDate</h3>
+        @foreach(var product in order.products)
+        {
+            <div class="pull-left">
+                <strong>Name: </strong>@product.Name <strong>Number: </strong>@product.Number
+            </div>
+ 
+            <div class="pull-right">
+                <strong>Price per 1 unit: </strong>@product.Price
+            </div>
+            <br />
+        }
+    </div>
+}
